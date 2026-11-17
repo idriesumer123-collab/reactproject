@@ -1,0 +1,100 @@
+.student-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.student-avatar {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8eee4;
+  color: #58744d;
+  font-size: 1.3rem;
+}
+
+.student-details {
+  flex: 1;
+}
+
+.student-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.student-name-row h3 {
+  margin: 0;
+  color: #29352f;
+}
+
+.student-id {
+  color: #777;
+  font-size: 0.7rem;
+}
+
+.student-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 10px 0 0;
+}
+
+.student-facts div {
+  display: flex;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.student-facts dt {
+  color: #666;
+}
+
+.student-facts dd {
+  margin: 0;
+  color: #29352f;
+}
+
+.student-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.student-actions button {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #46534b;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.student-actions .profile-delete {
+  border-color: transparent;
+  color: #875f52;
+}
+
+@media (max-width: 560px) {
+  .student-profile {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .student-details {
+    flex-basis: calc(100% - 64px);
+  }
+
+  .student-actions {
+    flex-direction: row;
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px auto 0;
+}
+
+.quick-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #29352f;
+  text-decoration: none;
+}
+
+.quick-action-icon {
+  color: #58744d;
+  font-weight: bold;
+}
+
+.quick-action-label,
+.quick-action-hint {
+  display: block;
+}
+
+.quick-action-label {
+  font-weight: bold;
+}
+
+.quick-action-hint {
+  margin-top: 3px;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.quick-action-arrow {
+  margin-left: auto;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .quick-actions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

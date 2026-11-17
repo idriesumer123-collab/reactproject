@@ -1,0 +1,44 @@
+.professor-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.professor-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.professor-number {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.professor-avatar {
+  color: #58744d;
+}
+
+.professor-card h3 {
+  margin: 12px 0 5px;
+  color: #2b3731;
+}
+
+.professor-department {
+  margin: 0 0 12px;
+  color: #666;
+}
+
+.professor-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #58744d;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.professor-email span {
+  color: #777;
+}
