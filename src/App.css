@@ -1,81 +1,66 @@
-.app-shell {
-  min-height: 100vh;
-  background: #f5f5f2;
+
+* {
+  box-sizing: border-box;
 }
 
-.dashboard {
-  width: min(100% - 32px, 900px);
-  margin: 0 auto;
-  padding: 40px 0;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
 }
 
-.dashboard-heading {
+.app {
+  padding: 30px;
   text-align: center;
-  margin-bottom: 24px;
 }
 
-.eyebrow {
-  margin: 0 0 8px;
-  color: #777;
-  font-size: 0.75rem;
-}
-
-.dashboard-heading h1,
-.section-heading h2 {
-  margin: 0;
-  color: #29352f;
-}
-
-.dashboard-heading h1 {
-  font-size: 2rem;
-}
-
-.dashboard-subtitle {
-  margin: 8px 0 0;
-  color: #666;
-}
-
-.profile-section,
-.professors-section {
-  margin-top: 28px;
-}
-
-.section-heading {
+.navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+  margin-bottom: 50px;
 }
 
-.section-heading h2 {
-  font-size: 1.35rem;
+.navbar a {
+  text-decoration: none;
+  color: black;
 }
 
-.status-pill {
-  color: #58744d;
-  font-size: 0.8rem;
+h1 {
+  margin-bottom: 50px;
 }
 
-.section-note {
-  margin: 0;
-  color: #666;
-  font-size: 0.85rem;
+.actions {
+  margin-bottom: 30px;
 }
 
-.professor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+.actions button {
+  padding: 14px 25px;
+  margin: 5px;
+  border: 1px solid #777;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-@media (max-width: 640px) {
-  .professor-grid {
-    grid-template-columns: 1fr;
-  }
+.professors {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
 
-  .section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+.card {
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  line-height: 2;
+}
+
+.card h2 {
+  margin-bottom: 25px;
 }

@@ -1,66 +1,40 @@
 import './App.css'
-import Navbar from './components/navbar.jsx'
-import QuickActions from './components/QuickActions.jsx'
-import StudentProfile from './components/StudentProfile.jsx'
-import ProfessorCard from './components/ProfessorCard.jsx'
-
+import StudentForm from './components/StudentForm.jsx'
 function App() {
+  const professors = [
+    { name: '1', department: 'Computer Science', email: '1@university.edu' },
+    { name: '2', department: 'Mathematics', email: '2@university.edu' },
+    { name: '3', department: 'Physics', email: '3@university.edu' }
+  ]
+
   return (
-    <div className="app-shell" id="home">
-      <Navbar />
-      <main className="dashboard">
-        <header className="dashboard-heading">
-          <p className="eyebrow">CAMPUS PORTAL <span aria-hidden="true">/</span> OVERVIEW</p>
-          <h1>Student dashboard</h1>
-          <p className="dashboard-subtitle">A little space to keep your campus life in order.</p>
-        </header>
+    <div className="app">
+      <nav className="navbar">
+        <a href="#home">Home</a>
+        <a href="#me">Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#resources">Resources</a>
+      </nav>
 
-        <QuickActions />
+      <h1>Student Dashboard</h1>
+     <StudentForm />
+      <div className="actions">
+        <button>Attendance</button>
+        <button>Schedule</button>
+        <button>Pay Fees</button>
+      </div>
 
-        <section className="profile-section" id="profile" aria-labelledby="profile-section-title">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">YOUR ACCOUNT</p>
-              <h2 id="profile-section-title">Student profile</h2>
-            </div>
-            <span className="status-pill"><span aria-hidden="true" /> Active student</span>
+      <div className="professors">
+        {professors.map((professor) => (
+          <div className="card" key={professor.name}>
+            <h2>Professors</h2>
+            <p>Name: {professor.name}</p>
+            <p>Department: {professor.department}</p>
+            <p>Email: {professor.email}</p>
           </div>
-          <StudentProfile />
-        </section>
-
-        <section className="professors-section" id="professors" aria-labelledby="professors-title">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">YOUR FACULTY</p>
-              <h2 id="professors-title">Meet your professors</h2>
-            </div>
-            <p className="section-note">The people behind your studies</p>
-          </div>
-          <div className="professor-grid">
-            <ProfessorCard
-              number="01"
-              name="Professor 1"
-              department="Computer Science"
-              email="1@university.edu"
-              initials="P1"
-            />
-            <ProfessorCard
-              number="02"
-              name="Professor 2"
-              department="Mathematics"
-              email="2@university.edu"
-              initials="P2"
-            />
-            <ProfessorCard
-              number="03"
-              name="Professor 3"
-              department="Physics"
-              email="3@university.edu"
-              initials="P3"
-            />
-          </div>
-        </section>
-      </main>
+        ))}
+      </div>
     </div>
   )
 }
